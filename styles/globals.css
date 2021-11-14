@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 html,
 body {
   padding: 0;
@@ -12,5 +14,39 @@ a {
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f3f3f3; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #BAE6FF; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #9fc8e0; 
+}
+
+header {
+  padding: 1em;
+  max-width: 85%;
+  margin: auto;
+}
+
+header>div {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
 }
