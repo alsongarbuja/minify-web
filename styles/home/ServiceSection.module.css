@@ -1,0 +1,14 @@
+.service-section {
+    padding-block: 3em;
+    width: 28%;
+}
+
+.service-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.service-top img {
+    margin-right: 1em;
+}
