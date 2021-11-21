@@ -13,7 +13,7 @@ export default function Home() {
         <meta name="description" content="Pokhara based software company. Providing you with high quality web services." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles['hero-wrapper']}>
+      <div className={`${styles['hero-wrapper']} flex container`}>
         <div className={styles['hero-text--wrapper']}>
             <div className={styles['hero-text']}>
                 <h1>Expand your business</h1>
@@ -32,7 +32,7 @@ export default function Home() {
         </div>
     </div>
     <div className={styles['service-section--wrapper']}>
-        <div className={styles['service-section']}>
+        <div className={`${styles['service-section']} container`}>
             <h2>Services We Provide</h2>
             <div className={styles['services-wrapper']}>
                 <ServiceSection 
@@ -69,9 +69,9 @@ export default function Home() {
         </div>
     </div>
     <div className={styles['how-work--wrapper']}>
-        <div className={styles['how-work-section--wrapper']}>
+        <div className={`${styles['how-work-section--wrapper']} container`}>
             <h2>How We Work</h2>
-            <div className={styles['how-work--section']}>
+            <div className={`${styles['how-work--section']} flex`}>
                 <p>
                     All of our team members work from home maximizing the work time while minimizing
                     the commute time. But with meetings every other day, we all communicate and work
@@ -83,7 +83,7 @@ export default function Home() {
             </div>
         </div>
     </div>
-    <div className={styles['testomonial-wrapper']}>
+    <div className={`${styles['testomonial-wrapper']} container`}>
         <h2>As They Say</h2>
         <div className={styles['testomonals']}>
             <TestomonialSection 
