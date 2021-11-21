@@ -25,6 +25,10 @@
     cursor: pointer;
 }
 
+.navbar li:hover {
+    border-bottom: 2px solid #6633999d;
+}
+
 .active-menu {
     border-bottom: 2px solid #663399;
 }
@@ -38,4 +42,10 @@
     background-color: #663399;
     width: 15%;
     height: 3px;
+}
+
+@media screen and (max-width: 768px){
+    .navbar {
+        display: none;
+    }
 }
