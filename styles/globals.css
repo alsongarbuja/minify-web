@@ -40,6 +40,18 @@ a {
   background: #9fc8e0; 
 }
 
+/* Utility classes */
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
 header {
   padding: 1em;
   max-width: 85%;
