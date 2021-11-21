@@ -2,11 +2,17 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
+import { RiFacebookCircleLine, RiInstagramLine } from 'react-icons/ri'
+import { FiArrowUp } from 'react-icons/fi'
+
 import styles from '../styles/layout/Header.module.css'
+import classes from '../styles/layout/Footer.module.css'
 
 const Layout = ({ children }) => {
 
     const { pathname } = useRouter()
+
+    const toTop = () => window.scrollTo(0,0)
 
     return (
         <>
@@ -17,14 +23,14 @@ const Layout = ({ children }) => {
                     </span>
                     <nav>
                         <ul className={styles.navbar}>
-                            <Link href='/' className={pathname==='/'?styles['active-menu']:''}>
-                                <li>Home</li>
+                            <Link href='/'>
+                                <li className={pathname==='/'?styles['active-menu']:''}>Home</li>
                             </Link>
-                            <Link href='/projects' className={pathname==='/projects'?styles['active-menu']:''}>
-                                <li>Projects</li>
+                            <Link href='/projects'>
+                                <li className={pathname==='/projects'?styles['active-menu']:''}>Projects</li>
                             </Link>
-                            <Link href='/about' className={pathname==='/about'?styles['active-menu']:''}>
-                                <li>About</li>
+                            <Link href='/about'>
+                                <li className={pathname==='/about'?styles['active-menu']:''}>About</li>
                             </Link>
 
                             {/* <div 
@@ -42,8 +48,37 @@ const Layout = ({ children }) => {
             <main>
                 {children}
             </main>
-            <footer>
-
+            <footer className={`${classes['footer']}`}>
+                <div className={`${classes['footer-top']} flex container`}>
+                    <div className={classes['footer-logo--holder']}>
+                        <img src="/minify-full.png" alt="minify full logo" />
+                    </div>
+                    <button className={classes['to-top--btn']} onClick={toTop}>
+                        <FiArrowUp /> Back to Top
+                    </button>
+                </div>
+                <div className={classes["footer-holder"]}>
+                    <div className={classes["social-media--holder"]}>
+                        <RiFacebookCircleLine />
+                        <RiInstagramLine />
+                    </div>
+                    <div className={classes["footer-nav-holder"]}>
+                        <ul className={classes["footer-nav"]}>
+                            <Link href='/'>
+                                <li>Home</li>
+                            </Link>
+                            <Link href='/projects'>
+                                <li>Projects</li>
+                            </Link>
+                            <Link href='/about'>
+                                <li>About</li>
+                            </Link>
+                        </ul>
+                    </div>
+                </div>
+                <p className={classes["copyright-holder"]}>
+                    Minify IT services &copy; 2022
+                </p>
             </footer>
         </>
     )
