@@ -16,10 +16,10 @@ const Layout = ({ children }) => {
 
     return (
         <>
-            <header>
+            {/* <header>
                 <div>
                     <span className={styles['logo-holder']}>
-                        <img src='/minify-full.png' alt="minify logo" />
+                        <img src='/minifylogo.png' alt="minify logo" />
                     </span>
                     <nav>
                         <ul className={styles.navbar}>
@@ -32,26 +32,17 @@ const Layout = ({ children }) => {
                             <Link href='/about'>
                                 <li className={pathname==='/about'?styles['active-menu']:''}>About</li>
                             </Link>
-
-                            {/* <div 
-                                className={styles['active-menu--indicator']} 
-                                styles={
-                                    pathname==='/'?{left:'9%'}
-                                    :(pathname==='/about'?{left:'77%'}
-                                    :pathname==='/projects'?{left:'42%'}:{})
-                                }
-                            /> */}
                         </ul>
                     </nav>
                 </div>
-            </header>
+            </header> */}
             <main>
                 {children}
             </main>
-            <footer className={`${classes['footer']}`}>
+            {/* <footer className={`${classes['footer']}`}>
                 <div className={`${classes['footer-top']} flex container`}>
                     <div className={classes['footer-logo--holder']}>
-                        <img src="/minify-full.png" alt="minify full logo" />
+                        <img src="/minifylogo.png" alt="minify full logo" />
                     </div>
                     <button className={classes['to-top--btn']} onClick={toTop}>
                         <FiArrowUp /> Back to Top
@@ -60,7 +51,9 @@ const Layout = ({ children }) => {
                 <div className={classes["footer-holder"]}>
                     <div className={classes["social-media--holder"]}>
                         <RiFacebookCircleLine />
-                        <RiInstagramLine />
+                        <a href="https://www.instagram.com/minifyitservice/" target="_blank">
+                            <RiInstagramLine />
+                        </a>
                     </div>
                     <div className={classes["footer-nav-holder"]}>
                         <ul className={classes["footer-nav"]}>
@@ -79,7 +72,7 @@ const Layout = ({ children }) => {
                 <p className={classes["copyright-holder"]}>
                     Minify IT services &copy; 2022
                 </p>
-            </footer>
+            </footer> */}
         </>
     )
 }
