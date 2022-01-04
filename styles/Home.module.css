@@ -1,103 +1,126 @@
-.hero-text {
-  margin-bottom: 1.5em;
+.main {
+  width: 100%;
+  text-align: center;
 }
-
-.hero-text h1, .hero-text h4 {
-  font-weight: 400;
+.articles {
+  height: 100vh;
+  padding: 2em;
 }
-
-.hero-text h1 {
-  font-size: 2.75rem;
+.logo-holder { text-align: start; }
+.logo-holder img {
+  width: 5em;
 }
-
-.hero-text h4 {
-  width: 50%;
+.hero-div { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; }
+.hero-div h3 {
+  font-size: 4rem;
+  font-weight: 200;
 }
-
-.hero-btn {
-  background-color: #663399;
-  border: none;
-  padding: .75em 2em;
+.hero-div h1 {
+  font-size: 15rem;
+  background: -webkit-linear-gradient(
+    0deg, 
+    rgba(129,132,232,1) 0%, 
+    rgba(158,186,230,1) 18%, 
+    rgba(194,191,226,1) 46%, 
+    rgba(237,197,235,1) 69%, 
+    rgba(238,174,202,1) 87%, 
+    rgba(238,174,202,1) 87%, 
+    rgba(255,134,160,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.service-section {
+  background-color: #A262E2;
   color: #fff;
-  width: 55%;
-  border-radius: 20px 0 20px 0;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-
-.hero-image--wrapper img{
-  max-width: 600px;
+.services-top, .services-bottom {
+  margin-bottom: 1em;
+  width: 100%;
 }
+.h2 { font-size: 3rem; font-weight: 400; }
+.h6 { font-size: 2rem; font-weight: 300; }
 
-.service-section--wrapper {
-  background: url('/assets/img/service-blob.png') no-repeat;
-  background-size: auto;
-  background-position: center right;
-  padding: 4em 0;
+/* ----- Contact Section ----- */
+.contact-section { 
+  background-color: rgba(250, 250, 250, 0.75);
+  position: relative;
 }
-
-.services-wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding-block: 3em;
+.contacts-holder { 
+  justify-content: space-evenly; 
+  height: 75%;
 }
-
-.how-work--wrapper {
-  padding: 1em 0;
-  background: url('/assets/img/how-work--blob.png') no-repeat;
-  background-position: center left;
-  background-size: contain;
+.contact-icons svg{
+  width: 4em;
+  height: 4em;
+  margin-right: 1em;
 }
-
-.how-work--section p {
-  width: 60%;
+.socials-holder { margin-top: 2em; }
+.socials-holder svg {
+  width: 2em;
+  height: 2em;
+  margin-inline: 2em;
 }
-
-.how-work--section img {
-  width: 400px;
-}
-
-.testomonial-wrapper {
-  padding-block: 3em;
-}
-
-.testomonals {
-  display: flex;
-  padding-block: 3em .5em;
-  overflow-x: hidden;
-  gap: 2em;
-}
-
-.testomonial-handler--wrapper {
-  padding-inline-start: 7em;
-}
-
-.testomonial-handlers {
-  display: inline-block;
-  background-color: #c4c4c4;
-  width: 60px;
-  height: 10px;
-  margin-right: .5em;
-  border-radius: 5px;
+.chat-with-btn {
+  background-color: #663399;
+  color: #fff;
+  outline: none;
   cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 1em 2em;
+  justify-content: space-between;
+  margin: auto;
 }
-
-.active-testomonial--handler {
-  background-color: #676767;
+.light-btn, .dark-bg {
+  position: absolute;
 }
-
-@media screen and (max-width: 768px) {
-  .services-wrapper, .hero-wrapper, .how-work--section {
-    flex-direction: column;
-  }
-  .hero-wrapper .hero-text--wrapper {
-    margin-bottom: 1em;
-    text-align: center;
-  }
-  .hero-text h4{
-    width: 100%;
-  }
-  .how-work--section p {
-    width: 100%;
-    margin-bottom: 2em;
-  }
+.light-btn {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1em;
+  right: 10px;
+  top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
+.dark-bg {
+  background-color: rgba(0, 0, 0, 0.966);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: 100% 100%;
+}
+.dark-bg:hover {
+  background: radial-gradient(
+      circle,
+      transparent 160px,
+      rgba(0, 0, 1, 0.966) 150px
+  );
+  transition: all 2s ease;
+}
+/* ----- End Contact Section ------ */
+/* ----- About Section ------ */
+.about-section {
+  padding: 2em 4em;
+}
+.about-section--text {
+  height: 70%;
+}
+.about-section--text>p{
+  max-width: 600px;
+  font-size: 1.5rem;
+  text-align: justify;
+  font-weight: 300;
+  padding: 1em;
+}
+.about-section--text>div{
+  max-width:500px;
+  padding: 1em;
+}
+/* ----- End About Section ------ */

@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -22,7 +14,7 @@ a {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 2px;
 }
 
 /* Track */
@@ -43,7 +35,7 @@ a {
 /* Utility classes */
 .flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .container {
@@ -67,4 +59,10 @@ header>div {
  header {
    border-bottom: 1px solid #f2f2f2;
  }   
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }  
 }
