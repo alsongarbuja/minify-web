@@ -27,6 +27,7 @@
 }
 .social-media--holder svg{
     font-size: 2rem;
+    cursor: pointer;
 }
 .footer-nav {
     display: flex;
@@ -35,7 +36,8 @@
     padding-block: 1em;
 }
 .footer-nav li {
-    padding-inline: 2em;
+    margin-inline: 2em;
+    cursor: pointer;
 }
 .copyright-holder {
     padding-block: 1em;
