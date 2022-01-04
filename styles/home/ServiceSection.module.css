@@ -1,21 +1,11 @@
 .service-section {
-    padding-block: 3em;
-    width: 28%;
+    margin-inline: 1.5em;
 }
-
-.service-top {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1em;
-}
-
-.service-top img {
-    margin-right: 1em;
-}
-
-@media screen and (max-width: 768px) {
-    .service-section {
-        width: 100%;
-        padding-block: 1.5em;
-    }
+.service-section .service-icon {
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    color: #663399;
 }
