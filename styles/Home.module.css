@@ -13,7 +13,7 @@
 .hero-div { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; }
 .hero-div h3 {
   font-size: 4rem;
-  font-weight: 200;
+  font-weight: 400;
 }
 .hero-div h1 {
   font-size: 15rem;
@@ -47,6 +47,7 @@
 .contact-section { 
   background-color: rgba(250, 250, 250, 0.75);
   position: relative;
+  overflow: hidden;
 }
 .contacts-holder { 
   justify-content: space-evenly; 
@@ -58,10 +59,18 @@
   margin-right: 1em;
 }
 .socials-holder { margin-top: 2em; }
+.socials-holder a { 
+  margin-inline: 2em;
+}
+.socials-holder a:hover>svg {
+  color: rgba(129,132,232,1);
+}
+.socials-holder a:hover>.insta {
+  color: rgba(255,134,160,1);
+}
 .socials-holder svg {
   width: 2em;
   height: 2em;
-  margin-inline: 2em;
 }
 .chat-with-btn {
   background-color: #663399;
@@ -84,43 +93,76 @@
   outline: none;
   cursor: pointer;
   padding: 1em;
+  width: 5em;
+  height: 5em;
   right: 10px;
   top: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
 }
-.dark-bg {
-  background-color: rgba(0, 0, 0, 0.966);
+.active-light--btn{
+  color: #FFD700 !important;
+  background-color: #000;
+  transition: all 0.5s ease-in-out;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
   width: 100%;
-  height: 100%;
-  top: 0;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
   left: 0;
-  background-size: 100% 100%;
+  background-color: #663399;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
 }
-.dark-bg:hover {
-  background: radial-gradient(
-      circle,
-      transparent 160px,
-      rgba(0, 0, 1, 0.966) 150px
-  );
-  transition: all 2s ease;
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.hover-underline-animation:hover {
+  color: #663399;
 }
 /* ----- End Contact Section ------ */
 /* ----- About Section ------ */
 .about-section {
+  background-color: #78E9F9;
   padding: 2em 4em;
 }
 .about-section--text {
   height: 70%;
+  justify-content: space-evenly;
 }
 .about-section--text>p{
   max-width: 600px;
   font-size: 1.5rem;
   text-align: justify;
-  font-weight: 300;
+  color: rgba(0, 0, 0, 0.575);
+  font-weight: 400;
   padding: 1em;
 }
 .about-section--text>div{
+  border-left: 4px dashed rgba(0, 0, 0, 0.575);
   max-width:500px;
+  overflow: hidden;
   padding: 1em;
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.575);
 }
 /* ----- End About Section ------ */
+/* ----- Footer ----- */
+.footer {
+  padding: 1em;
+  background-color: #000000e7;
+  color: #e2e2e2;
+}
+/* ----- End Footer ----- */
