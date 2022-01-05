@@ -2,11 +2,14 @@ import { useEffect, useRef, useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 
-import AOS from 'aos' 
-import { Airplay, Command, Crosshair, Facebook, Instagram, Mail, MessageCircle, Monitor, Server, Smartphone, Sun, Tool, Twitter } from 'react-feather'
+import AOS from 'aos'
+import Slider from 'react-slick'
 import 'aos/dist/aos.css'
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+import { Airplay, Command, Crosshair, Facebook, Instagram, Mail, MessageCircle, Monitor, Server, Smartphone, Sun, Tool, Twitter } from 'react-feather'
 
-import { ServiceSection, TestomonialSection } from '../components/home'
+import { ServiceSection, TestomonialSection, SideIndicator } from '../components/home'
 
 import styles from '../styles/Home.module.css'
 
@@ -58,6 +61,7 @@ export default function Home() {
                   <h1>MINIFY</h1>
               </div>
           </article>
+          <SideIndicator />
           <article className={`${styles.articles} ${styles['service-section']} flex`}>
               <h2 className={styles.h2}>Our Services</h2>
               <div className={styles['services-holder']}>
@@ -77,22 +81,22 @@ export default function Home() {
                     <ServiceSection 
                         icon={<Command />}
                         title='Logo Design'
-                        duration='700'
+                        duration='300'
                     />
                     <ServiceSection 
                         icon={<Tool />}
                         title='Support'
-                        duration='900'
+                        duration='500'
                     />
                     <ServiceSection 
                         icon={<Server />}
                         title='Hosting'
-                        duration='1100'
+                        duration='700'
                     />
                     <ServiceSection 
                         icon={<Monitor />}
                         title='Web Design'
-                        duration='1300'
+                        duration='900'
                     />
                   </div>
               </div>
@@ -163,7 +167,7 @@ export default function Home() {
                 </button>
           </article>
           <article className={`${styles.articles} ${styles['about-section']}`}>
-              <h2 className={styles.h2}>About Us and They Say</h2>
+              <h2 className={`${styles.h2} ${styles['type-line']} ${styles['anim-typewriter']}`}>About Us and They Say</h2>
               <div className={`flex ${styles['about-section--text']}`}>
                   <p>
                     Minify is a software company based in Pokhara, Nepal with highly passionate 
@@ -171,11 +175,39 @@ export default function Home() {
                     With cutting edge technologies and customer satisfaction in mind, we aim for
                     better, faster and easier solutions to your problems.
                   </p>
-                  <TestomonialSection
-                    imageUrl="/assets/img/minify-hero--image.png"
-                    name="Kirshna Prasad"
-                    say="They did a great job pulling out every ounces of our business to new heights with our newly build website"
-                  />
+                  {/* <div>
+
+                  </div> */}
+                  <Slider 
+                    dots={true}
+                    infinite={true}
+                    autoplay={true}
+                    speed={500}
+                    slidesToShow={1}
+                    slidesToScroll={1}
+                  >
+                      <div>
+                        <TestomonialSection
+                            imageUrl="/assets/img/minify-hero--image.png"
+                            name="Kirshna Prasad"
+                            say="They did a great job pulling out every ounces of our business to new heights with our newly build website"
+                        />
+                      </div>
+                      <div>
+                        <TestomonialSection
+                            imageUrl="/assets/img/minify-hero--image.png"
+                            name="Jhon Doe"
+                            say="They did a great job pulling out every ounces of our business to new heights with our newly build website"
+                        />
+                      </div>
+                      <div>
+                        <TestomonialSection
+                            imageUrl="/assets/img/minify-hero--image.png"
+                            name="Iyer"
+                            say="They did a great job pulling out every ounces of our business to new heights with our newly build website"
+                        />
+                      </div>
+                  </Slider>
               </div>
           </article>
           <footer className={styles.footer}>
