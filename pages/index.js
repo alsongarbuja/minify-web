@@ -1,7 +1,10 @@
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import { Airplay, Command, Crosshair, Facebook, Instagram, Mail, MessageCircle, Monitor, Server, Smartphone, Tool, Twitter } from 'react-feather'
+
+import AOS from 'aos' 
+import { Airplay, Command, Crosshair, Facebook, Instagram, Mail, MessageCircle, Monitor, Server, Smartphone, Sun, Tool, Twitter } from 'react-feather'
+import 'aos/dist/aos.css'
 
 import { ServiceSection, TestomonialSection } from '../components/home'
 
@@ -10,14 +13,33 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
 
     const spotLight = useRef();
+    const lightBulb = useRef();
+    const [isDarkness, setIsDarkness] = useState(true)
+    const [location, setLocation] = useState({
+        x: -100,
+        y: -100,
+    })
 
-    function updateSpotlight(e) {
-        // spotLight.current.style.background = `radial-gradient(circle at ${e.pageX / window.innerWidth * 100}% ${e.pageY / window.innerHeight * 100}%, transparent 130px, rgba(0, 0, 0, 0.966) 150px)`;
+    useEffect(() => {
+        AOS.init()
+    }, [])
+
+    const updateSpotLight = e => {
+        if(isDarkness)
+            setLocation({ x: (e.screenX/window.innerWidth)*100, y: (e.screenY/window.innerHeight)*100 })
     }
 
-  const handleTestMonial = () => {
-      
-  }
+    const toggleDarkness = () => {
+        if(isDarkness){
+            spotLight.current.style.display = 'none'
+            setIsDarkness(false)
+            lightBulb.current.classList.add(styles['active-light--btn'])
+        }else{
+            spotLight.current.style.display = 'block'
+            setIsDarkness(true)
+            lightBulb.current.classList.remove(styles['active-light--btn'])
+        }
+    }
 
   return (
     <>
@@ -43,28 +65,34 @@ export default function Home() {
                       <ServiceSection 
                         icon={<Airplay />}
                         title='Web Dev'
+                        duration='300'
                       />
                       <ServiceSection 
                         icon={<Crosshair />}
                         title='SEO'
+                        duration='500'
                       />
                   </div>
                   <div className={`${styles['services-bottom']} flex`}>
                     <ServiceSection 
                         icon={<Command />}
                         title='Logo Design'
+                        duration='700'
                     />
                     <ServiceSection 
                         icon={<Tool />}
                         title='Support'
+                        duration='900'
                     />
                     <ServiceSection 
                         icon={<Server />}
                         title='Hosting'
+                        duration='1100'
                     />
                     <ServiceSection 
                         icon={<Monitor />}
                         title='Web Design'
+                        duration='1300'
                     />
                   </div>
               </div>
@@ -88,15 +116,23 @@ export default function Home() {
                           <span className={styles['contact-icons']}>
                               <Mail />
                           </span>
-                          <h6 className={styles.h6}>minifyitservice@gmail.com</h6>
+                          <h6 className={styles.h6}>
+                              <a href="mailto: minifyitservice@gmail.com" className={styles['hover-underline-animation']}>minifyitservice@gmail.com</a>
+                          </h6>
                       </div>
                   </div>
                   <div className={styles.socials}>
                       <h6 className={styles.h6}>Social Links</h6>
                       <div className={styles['socials-holder']}>
-                          <Facebook />
-                          <Instagram />
-                          <Twitter />
+                          <a href="#">
+                              <Facebook />
+                          </a>
+                          <a href="#" target="_blank">
+                              <Instagram className={styles.insta} />
+                          </a>
+                          <a href="#">
+                              <Twitter />
+                          </a>
                       </div>
                   </div>
               </div>
@@ -106,8 +142,25 @@ export default function Home() {
                         <MessageCircle />
                     </span>
                 </button>
-                <button className={styles['light-btn']}>Light up</button>
-                <div className={styles['dark-bg']} ref={spotLight} onMouseMove={updateSpotlight}></div>
+                
+                <div 
+                    onMouseMove={updateSpotLight}
+                    ref={spotLight}
+                    className={styles['dark-bg']}
+                    style={{ 
+                        background: `radial-gradient(circle at ${location.x}% ${location.y}%, transparent 130px, rgba(0,0,1,0.966) 150px)`,
+                        position: 'absolute',
+                        top: '0',
+                        left: '0',
+                        width: '100%',
+                        height: '100%',
+                        // cursor: 'none',
+                    }}
+                >
+                </div>
+                <button className={styles['light-btn']} onClick={toggleDarkness} ref={lightBulb}>
+                    <Sun />
+                </button>
           </article>
           <article className={`${styles.articles} ${styles['about-section']}`}>
               <h2 className={styles.h2}>About Us and They Say</h2>
@@ -125,7 +178,9 @@ export default function Home() {
                   />
               </div>
           </article>
-          <article>FOOTER</article>
+          <footer className={styles.footer}>
+              <h4>Minify It Services &copy; 2022</h4>
+          </footer>
       </div>
     </>
   )
