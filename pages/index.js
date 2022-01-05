@@ -179,12 +179,13 @@ export default function Home() {
 
                   </div> */}
                   <Slider 
-                    dots={true}
+                    dots={false}
                     infinite={true}
                     autoplay={true}
                     speed={500}
                     slidesToShow={1}
                     slidesToScroll={1}
+                    arrows={false}
                   >
                       <div>
                         <TestomonialSection

@@ -30,11 +30,17 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media screen and (max-width: 768px) {
+  .hero-div h1 {
+    font-size: 6rem;
+  }
+}
 .service-section {
   background-color: #A262E2;
   color: #fff;
   flex-direction: column;
   justify-content: space-evenly;
+  padding: 2em 0;
 }
 .services-top, .services-bottom {
   margin-bottom: 1em;
@@ -179,6 +185,15 @@
   padding: 1em;
   font-size: 1.3rem;
   color: rgba(0, 0, 0, 0.575);
+}
+@media screen and (max-width: 768px) {
+  .about-section--text {
+    height: fit-content;
+    max-width: 300px;
+  }
+  .about-section--text>div{
+    border: none;
+  }
 }
 /* ----- End About Section ------ */
 /* ----- Footer ----- */

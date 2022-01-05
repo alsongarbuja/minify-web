@@ -1,6 +1,7 @@
 .testomonial-card {
     padding: 1em .5em;
     cursor: grab;
+    text-align: center;
 }
 .testomonial-card:active {
     cursor: grabbing;
@@ -17,8 +18,12 @@
     margin-bottom: .5em;
 }
 
+.testomonial-card p {
+    text-align: center;
+}
+
 @media screen and (max-width: 768px){
     .testomonial-card {
-        min-width: 100%;
+        min-width: 80%;
     }
 }

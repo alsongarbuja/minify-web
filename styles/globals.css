@@ -15,6 +15,7 @@ a {
 
 ::-webkit-scrollbar {
   width: 2px;
+  height: 2px;
 }
 
 /* Track */
@@ -63,6 +64,9 @@ header>div {
 
 @media screen and (max-width: 768px) {
   html {
-    font-size: 16px;
-  }  
+    font-size: 12px;
+  }
+  .flex { 
+    flex-direction: column;
+  }
 }
