@@ -1,0 +1,29 @@
+.side-indicator-holder {
+    position: fixed;
+    top: 50%;
+    left: 50px;
+    width: 40px;
+    transform: translateY(-50%);
+    height: 200px;
+    z-index: 3000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.side-indicators {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 3px rgba(236, 236, 236, 0.945);
+    cursor: pointer;
+}
+.side-indicators:hover {
+    box-shadow: inset 0 0 0 3px #8a44d1;
+}
+.active-side-indicator {
+    box-shadow: none;
+    background-color: #663399;
+    transition: all 0.5s ease-in-out;
+}
