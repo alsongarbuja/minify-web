@@ -8,9 +8,9 @@
 }
 .logo-holder { text-align: start; }
 .logo-holder img {
-  width: 5em;
+  width: 8em;
 }
-.hero-div { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; }
+.hero-div { display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .hero-div h3 {
   font-size: 4rem;
   font-weight: 400;
@@ -141,7 +141,7 @@
 /* ----- End Contact Section ------ */
 /* ----- About Section ------ */
 .about-section {
-  background-color: #78E9F9;
+  background-color: #BFFFBE;
   padding: 2em 4em;
 }
 .type-line {

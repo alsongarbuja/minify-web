@@ -54,7 +54,7 @@ export default function Home() {
       <div className={styles.main}>
           <article className={styles.articles}>
               <div className={styles['logo-holder']}>
-                  <img src='/minifylogo.png' alt="minify" />
+                  <img src='/M-purple.svg' alt="minify" />
               </div>
               <div className={styles['hero-div']}>
                   <h3>Welcome To</h3>
@@ -167,7 +167,7 @@ export default function Home() {
                 </button>
           </article>
           <article className={`${styles.articles} ${styles['about-section']}`}>
-              <h2 className={`${styles.h2} ${styles['type-line']} ${styles['anim-typewriter']}`}>About Us and They Say</h2>
+              <h2 className={`${styles.h2} ${styles['type-line']} ${styles['anim-typewriter']}`}>About Us</h2>
               <div className={`flex ${styles['about-section--text']}`}>
                   <p>
                     Minify is a software company based in Pokhara, Nepal with highly passionate 
