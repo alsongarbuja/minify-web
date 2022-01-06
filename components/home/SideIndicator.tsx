@@ -3,7 +3,7 @@ import styles from '../../styles/home/SideIndicator.module.css'
 
 const SideIndicator = () => {
 
-    const [currentSection, setCurrentSection] = useState()
+    const [currentSection, setCurrentSection] = useState(1)
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
