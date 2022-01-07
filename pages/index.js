@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { MessengerChat } from 'react-messenger-chat-plugin'
 
 import AOS from 'aos'
 import Slider from 'react-slick'
@@ -153,7 +154,7 @@ export default function Home() {
                   <div className={styles.socials}>
                       <h6 className={styles.h6}>Social Links</h6>
                       <div className={styles['socials-holder']}>
-                          <a href="#">
+                          <a href="https://www.facebook.com/Minify-it-service-108218508410826" target="_blank" rel="noreferrer">
                               <Facebook />
                           </a>
                           <a href="https://www.instagram.com/minifyitservice/" target="_blank" rel="noreferrer">
@@ -165,12 +166,26 @@ export default function Home() {
                       </div>
                   </div>
               </div>
-                <button className={`flex ${styles['chat-with-btn']}`}>
+              <MessengerChat
+                pageId='108218508410826'
+                language='en_US'
+                themeColor={'#336699'}
+                height={24}
+                loggedInGreeting='Hello logged in user!'
+                loggedOutGreeting='Hello stranger!'
+                autoExpand={true}
+                debugMode={false}
+                onMessengerShow={() => {console.log('onMessengerShow')}}
+                onMessengerHide={() => {console.log('onMessengerHide')}}
+                onMessengerDialogShow={() => {console.log('onMessengerDialogShow')}}
+                onMessengerDialogHide={() => {console.log('onMessengerDialogHide')}}
+              />
+                {/* <button className={`flex ${styles['chat-with-btn']}`}>
                     Chat With Us?
                     <span>
                         <MessageCircle />
                     </span>
-                </button>
+                </button> */}
                 
                 <div 
                     onMouseMove={updateSpotLight}
