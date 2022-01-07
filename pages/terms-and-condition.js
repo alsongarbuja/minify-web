@@ -29,24 +29,9 @@ const TermsCondition = () => {
                 <h1 id="terms-and-condition">Terms and Condition</h1>
             <h2 id="unregistered">UnRegistered</h2>
             <ul>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam error nobis veniam similique voluptas distinctio reprehenderit nihil, ipsa voluptates mollitia, a magnam quas iure deserunt ullam deleniti exercitationem illum tempore?</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam error nobis veniam similique voluptas distinctio reprehenderit nihil, ipsa voluptates mollitia, a magnam quas iure deserunt ullam deleniti exercitationem illum tempore?</li>
-            </ul>
-            <h2 id="non-disclouser-agreement">Non-Disclouser Agreement</h2>
-            <ul>
-            <li>
-            <h3 id="clients">Clients</h3>
-            <ul>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam error nobis veniam similique voluptas distinctio reprehenderit nihil, ipsa voluptates mollitia, a magnam quas iure deserunt ullam deleniti exercitationem illum tempore</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam error nobis veniam similique voluptas distinctio reprehenderit nihil, ipsa voluptates mollitia, a magnam quas iure deserunt ullam deleniti exercitationem illum tempore</li>
-            </ul>
-            </li>
-            <li>
-            <h3 id="employees">Employees</h3>
-            <ul>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam error nobis veniam similique voluptas distinctio reprehenderit nihil, ipsa voluptates mollitia, a magnam quas iure deserunt ullam deleniti exercitationem illum tempore</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam error nobis veniam similique voluptas distinctio reprehenderit nihil, ipsa voluptates mollitia, a magnam quas iure deserunt ullam deleniti exercitationem illu</li>
-            </ul>
+            <li>Minify IT service is an unregistered company, though we will provide you with all facilities any software company
+                provides or, even more than others. Still if you are to be involved in any illegal or law related problems than 
+                you are responsible for yourself, we at Minify IT Service will not be held responsible.
             </li>
             </ul>
             </div>
