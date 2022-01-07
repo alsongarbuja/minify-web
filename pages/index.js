@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import AOS from 'aos'
 import Slider from 'react-slick'
@@ -248,7 +249,7 @@ export default function Home() {
                 }}
               ><Heart /> Minify It Services &copy; 2022&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</h4>
               <p>
-                  <a href="/terms-and-condition" className={styles['hover-underline-animation']}>Terms and Condition</a>
+                  <Link href="/terms-and-condition"><span className={styles['hover-underline-animation']} style={{ cursor: 'pointer'}}>Terms and Condition</span></Link>
               </p>
           </footer>
       </div>
