@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
 
 import AOS from 'aos'
 import Slider from 'react-slick'
@@ -68,7 +67,7 @@ export default function Home() {
                 }}
               >
               <div className={styles['logo-holder']}>
-                  <img src='/M-purple.svg' alt="minify" />
+                  <img src='/M-white.svg' alt="minify" />
               </div>
               <div className={styles['hero-div']}>
                   <h3>Welcome To</h3>
@@ -248,7 +247,7 @@ export default function Home() {
                 }}
               ><Heart /> Minify It Services &copy; 2022&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</h4>
               <p>
-                  <a href="#" target="_blank" className={styles['hover-underline-animation']}>Terms and Condition</a>
+                  <a href="/terms-and-condition" className={styles['hover-underline-animation']}>Terms and Condition</a>
               </p>
           </footer>
       </div>

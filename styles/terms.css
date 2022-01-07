@@ -1,0 +1,23 @@
+.stackedit__html {
+    margin-bottom: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 750px;
+    /* box-shadow: 2px 5px 50px #25252557; */
+    border-radius: 5px;
+    padding: 2em;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+#unregistered, #non-disclouser-agreement {
+    margin-top: 1.5em;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #444;
+}
+
+ul {
+    padding: 1em;
+    margin-left: 2em;
+}

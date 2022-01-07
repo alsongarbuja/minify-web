@@ -26,6 +26,7 @@
     background-color: #000;
     background-position: center center;
     background-attachment: fixed;
+    position: relative;
 }
 .hero-div {
   margin-top: -70px; 
@@ -181,7 +182,7 @@
 /* ----- End Contact Section ------ */
 /* ----- About Section ------ */
 .about-section {
-  background-color: #BFFFBE;
+  background-color: #FCFCFC;
   padding: 2em 4em;
 }
 .type-line {
