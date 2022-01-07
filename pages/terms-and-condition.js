@@ -2,6 +2,7 @@ import React from 'react'
 import { ArrowLeft } from 'react-feather'
 import Link from 'next/link'
 import Head from 'next/head'
+import Image from 'next/image'
 
 import styles from '../styles/Home.module.css'
 
@@ -17,8 +18,8 @@ const TermsCondition = () => {
                 <meta name="description" content="Terms and conditions applied when working with Minify IT Service." />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div class="stackedit">
-                <div class="stackedit__html">
+            <div className="stackedit">
+                <div className="stackedit__html">
                 <Link href="/"><ArrowLeft style={{ 
                     cursor: 'pointer',
                  }}/></Link>

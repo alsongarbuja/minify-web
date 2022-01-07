@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import Head from 'next/head'
+import Image from 'next/image'
 
 import AOS from 'aos'
 import Slider from 'react-slick'
@@ -154,10 +155,10 @@ export default function Home() {
                           <a href="#">
                               <Facebook />
                           </a>
-                          <a href="https://www.instagram.com/minifyitservice/" target="_blank">
+                          <a href="https://www.instagram.com/minifyitservice/" target="_blank" rel="noreferrer">
                               <Instagram className={styles.insta} />
                           </a>
-                          <a href="#">
+                          <a href="https://twitter.com/minifyitservice" target="_blank" rel="noreferrer">
                               <Twitter />
                           </a>
                       </div>
