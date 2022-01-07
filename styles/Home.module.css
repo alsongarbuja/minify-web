@@ -130,6 +130,12 @@
     flex-direction: row;
     margin-block: 1em;
   } 
+  .dark-bg, .light-btn{
+    display: none;
+  }
+  .contact-section{
+    border-bottom: 1px solid #A262E2;
+  }
 }
 .light-btn, .dark-bg {
   position: absolute;
