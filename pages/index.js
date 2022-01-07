@@ -7,9 +7,9 @@ import Slider from 'react-slick'
 import 'aos/dist/aos.css'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import { Airplay, Command, Crosshair, Facebook, Instagram, Mail, MessageCircle, Monitor, Server, Smartphone, Sun, Tool, Twitter } from 'react-feather'
+import { Airplay, Command, Crosshair, Facebook, Heart, Instagram, Mail, MessageCircle, Monitor, Server, Smartphone, Sun, Tool, Twitter } from 'react-feather'
 
-import { ServiceSection, TestomonialSection, SideIndicator } from '../components/home'
+import { ServiceSection, TestomonialSection, SideIndicator, ProjectSection } from '../components/home'
 
 import styles from '../styles/Home.module.css'
 
@@ -52,13 +52,28 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.main}>
-          <article className={styles.articles}>
+          <article className={`${styles.articles} ${styles['top-section']}`}>
+              <div 
+                style={{
+                    position: 'absolute',
+                    top: '0',
+                    left: '0',
+                    width: '100%',
+                    height: '100%',
+                    backgroundColor: 'rgba(0,0,0,0.65)',
+                    padding: '0 3em',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-evenly'
+                }}
+              >
               <div className={styles['logo-holder']}>
                   <img src='/M-purple.svg' alt="minify" />
               </div>
               <div className={styles['hero-div']}>
                   <h3>Welcome To</h3>
                   <h1>MINIFY</h1>
+              </div>
               </div>
           </article>
           <SideIndicator />
@@ -105,7 +120,16 @@ export default function Home() {
                 <h6 className={styles.h6}>We Got You</h6>
               </div>
           </article>
-          <article className={styles.articles}>PROJECTS</article>
+          <article className={`${styles.articles} ${styles['project-section']} flex`}>
+            <h3 className={styles.h3}>Checkout Our <br/> Projects</h3>
+            <div className={styles.projects}>
+                <ProjectSection
+                    title='Sport Meet App'
+                    description="Sport meet app is a progressive web app designed and developed for making the arrangements of sport meet program of colleges in nepal easy"
+                    route='https://gcessportmeet.netlify.app/'
+                />
+            </div>
+          </article>
           <article className={`${styles.articles} ${styles['contact-section']}`}>
               <h2 className={styles.h2}>Find US</h2>
               <div className={`${styles['contacts-holder']} flex`}>
@@ -114,7 +138,7 @@ export default function Home() {
                           <span className={styles['contact-icons']}>
                               <Smartphone />
                           </span>
-                          <h6 className={styles.h6}>9825140802 / 9846069180</h6>
+                          <h6 className={styles.h6}>9825140802 / 9806737496</h6>
                       </div>
                       <div className={`flex`} style={{ marginTop: '2em' }}>
                           <span className={styles['contact-icons']}>
@@ -131,7 +155,7 @@ export default function Home() {
                           <a href="#">
                               <Facebook />
                           </a>
-                          <a href="#" target="_blank">
+                          <a href="https://www.instagram.com/minifyitservice/" target="_blank">
                               <Instagram className={styles.insta} />
                           </a>
                           <a href="#">
@@ -169,6 +193,10 @@ export default function Home() {
           <article className={`${styles.articles} ${styles['about-section']}`}>
               <h2 className={`${styles.h2} ${styles['type-line']} ${styles['anim-typewriter']}`}>About Us</h2>
               <div className={`flex ${styles['about-section--text']}`}>
+                  <div className={styles['about-images']}>
+                    <img src="/assets/img/single.jpg" alt="about minify photo 1" className={styles['about-img-1']} />
+                    <img src="/assets/img/team.jpg" alt="about minify photo 2" className={styles['about-img-2']} />
+                  </div>
                   <p>
                     Minify is a software company based in Pokhara, Nepal with highly passionate 
                     engineers and designers to help you achieve your dream project.
@@ -178,7 +206,7 @@ export default function Home() {
                   {/* <div>
 
                   </div> */}
-                  <Slider 
+                  {/* <Slider 
                     dots={false}
                     infinite={true}
                     autoplay={true}
@@ -208,11 +236,20 @@ export default function Home() {
                             say="They did a great job pulling out every ounces of our business to new heights with our newly build website"
                         />
                       </div>
-                  </Slider>
+                  </Slider> */}
               </div>
           </article>
           <footer className={styles.footer}>
-              <h4>Minify It Services &copy; 2022</h4>
+              <h4 
+                style={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'space-between'
+                }}
+              ><Heart /> Minify It Services &copy; 2022&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</h4>
+              <p>
+                  <a href="#" target="_blank" className={styles['hover-underline-animation']}>Terms and Condition</a>
+              </p>
           </footer>
       </div>
     </>

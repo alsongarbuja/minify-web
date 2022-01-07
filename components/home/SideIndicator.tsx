@@ -7,7 +7,6 @@ const SideIndicator = () => {
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
-            console.log(window.pageYOffset);
             const currentY = window.pageYOffset
             if(currentY < 500)
                 setCurrentSection(1)

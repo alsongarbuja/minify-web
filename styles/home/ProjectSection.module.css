@@ -1,0 +1,46 @@
+.project-section--holder {
+    background-color: #fff;
+    padding-top: 1em;
+    padding-right: 1em;
+    border-radius: 10px;
+    box-shadow: 0 3px 20px #CAD8F4;
+    max-width: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-section--title {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.project-section--description {
+    font-size: .85rem;
+    padding: 2em 1em 5.5em 1.5em;
+    text-align: justify; 
+}
+
+.project-section--btn {
+    background-color: #F4DBDB;
+    padding: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    right: -36%;
+    border-radius: 50px;
+    transition: all 0.5s ease-in-out;
+    color: #D8154F;
+}
+.project-section--btn:hover {
+    border-radius: 0;
+    right: 0;
+    border-end-end-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+.project-section--btn svg {
+    margin-right: .5em;
+}
