@@ -123,13 +123,32 @@ export default function Home() {
               </div>
           </article>
           <article className={`${styles.articles} ${styles['project-section']} flex`}>
-            <h3 className={styles.h3}>Checkout Our <br/> Projects</h3>
-            <div className={styles.projects}>
-                <ProjectSection
-                    title='Sport Meet App'
-                    description="Sport meet app is a progressive web app designed and developed for making the arrangements of sport meet program of colleges in nepal easy"
-                    route='https://gcessportmeet.netlify.app/'
-                />
+            <h3 className={styles.h3}>Checkout Our Projects</h3>
+            <div className={styles['projects--holder']}>
+                <div className={styles.projects}>
+                    <ProjectSection
+                        title='Sport Meet App'
+                        description="Sport meet app is a progressive web app designed and developed for making the arrangements of sport meet program of colleges in nepal easy"
+                        route='https://gcessportmeet.netlify.app/'
+                    /><br />
+                    <ProjectSection
+                        title='Covid-19 App'
+                        description="A progressive web app made in React for getting the news on Covid-19 around the globe. It is simple, slik yet a very helpful app for getting upto date news on Covid."
+                        route='https://www.covid19stat.tk/'
+                    />
+                </div>
+                {/* <div className={styles.projects}>
+                    <ProjectSection
+                        title='Sport Meet App'
+                        description="Sport meet app is a progressive web app designed and developed for making the arrangements of sport meet program of colleges in nepal easy"
+                        route='https://gcessportmeet.netlify.app/'
+                    /><br />
+                    <ProjectSection
+                        title='Covid-19 App'
+                        description="A progressive web app made in React for getting the news on Covid-19 around the globe. It is simple, slik yet a very helpful app for getting upto date news on Covid."
+                        route='https://www.covid19stat.tk/'
+                    />
+                </div> */}
             </div>
           </article>
           <article className={`${styles.articles} ${styles['contact-section']}`}>

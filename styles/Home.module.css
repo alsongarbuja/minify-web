@@ -57,7 +57,7 @@
   .articles {
     height: fit-content;
   }
-  .top-section, .project-section {
+  .top-section {
     height: 70vh;
   }
   .hero-div h1 {
@@ -82,6 +82,24 @@
 .project-section {
   background-color: #F8EEEE;
   justify-content: space-evenly;
+}
+.project-section h3 {
+  margin-block: 1em 1.5em;
+}
+.projects--holder {
+  display: flex;
+  justify-content: space-between;
+}
+.projects div:first-child {
+  margin-left: 3em;
+}
+@media screen and (max-width: 786px) {
+  .projects--holder {
+    flex-direction: column;
+  }
+  .projects div {
+    margin-bottom: 1em;
+  }
 }
 /* ----- End Service Section ----- */
 /* ----- Contact Section ----- */
