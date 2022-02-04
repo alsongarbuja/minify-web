@@ -106,8 +106,8 @@ export default function Home() {
                         duration='500'
                     />
                     <ServiceSection 
-                        icon={<Server />}
-                        title='Hosting'
+                        icon={<Smartphone />}
+                        title='App Dev'
                         duration='700'
                     />
                     <ServiceSection 
