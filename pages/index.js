@@ -190,8 +190,8 @@ export default function Home() {
                 language='en_US'
                 themeColor={'#336699'}
                 height={24}
-                loggedInGreeting='Hello logged in user!'
-                loggedOutGreeting='Hello stranger!'
+                loggedInGreeting='How can we help you?'
+                loggedOutGreeting='Hello!'
                 autoExpand={true}
                 debugMode={false}
                 onMessengerShow={() => {console.log('onMessengerShow')}}
