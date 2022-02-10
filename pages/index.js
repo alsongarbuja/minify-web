@@ -233,9 +233,9 @@ export default function Home() {
                     <img src="/assets/img/team.jpg" alt="about minify photo 2" className={styles['about-img-2']} />
                   </div>
                   <p>
-                    Minify is a software company based in Pokhara, Nepal with highly passionate 
+                    Minify is a Remote Based software company with highly passionate 
                     engineers and designers to help you achieve your dream project.
-                    With cutting edge technologies and customer satisfaction in mind, we aim for
+                    With latest technologies and customer satisfaction in mind, we aim for
                     better, faster and easier solutions to your problems.
                   </p>
                   {/* <div>
